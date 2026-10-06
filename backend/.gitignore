@@ -1,0 +1,28 @@
+# -----------------------------------------------
+# .gitignore — files Git will NOT track or upload
+# -----------------------------------------------
+
+# Your secret API keys — NEVER share this file online
+.env
+
+# Python virtual environment — recreate it with: pip install -r requirements.txt
+venv/
+
+# Python auto-generated cache files — not needed
+__pycache__/
+*.pyc
+
+# SQLite database file — contains real user data
+*.db
+
+# Uploaded university PDF files — admin uploads these manually
+data/uploads/
+
+# AI vector index — auto-generated when PDFs are uploaded
+data/vector_store/
+
+# Log files
+*.log
+
+# Mac system file
+.DS_Store

@@ -1,0 +1,35 @@
+# -----------------------------------------------
+# .gitignore — tells Git which files NOT to upload
+# -----------------------------------------------
+
+# Your secret API keys — never share these online
+backend/.env
+
+# Python virtual environment (too large to upload, recreate with pip install)
+backend/venv/
+
+# Python cache files (auto-generated, not needed)
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+
+# Database file (contains real user data, don't upload)
+backend/data/*.db
+
+# Uploaded PDF files (too large, admin uploads them manually)
+backend/data/uploads/
+
+# AI vector index files (auto-generated when PDFs are uploaded)
+backend/data/vector_store/
+
+# Node modules (too large to upload, recreate with npm install)
+frontend/node_modules/
+
+# Built frontend files (auto-generated with npm run build)
+frontend/dist/
+
+# Log files
+*.log
+
+# Mac system file (not needed on other computers)
+.DS_Store

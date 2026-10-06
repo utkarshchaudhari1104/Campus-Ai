@@ -1,0 +1,15 @@
+# -----------------------------------------------
+# .gitignore — files Git will NOT track or upload
+# -----------------------------------------------
+
+# Node modules — too large to upload, recreate with: npm install
+node_modules/
+
+# Built production files — recreate with: npm run build
+dist/
+
+# Log files
+*.log
+
+# Mac system file
+.DS_Store
