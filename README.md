@@ -86,26 +86,6 @@ Website runs at: http://localhost:5173
 
 ---
 
-## Setting Up the AI (Optional but Recommended)
-
-By default, the app shows text directly from the documents without an AI key.
-To get proper AI-generated answers, add an API key in `backend/.env`:
-
-**Option 1 — OpenAI (paid)**
-```
-OPENAI_API_KEY=sk-your-key-here
-LLM_PROVIDER=openai
-```
-
-**Option 2 — Groq (free)**
-Get a free key at https://console.groq.com
-```
-GROQ_API_KEY=gsk_your-key-here
-LLM_PROVIDER=groq
-```
-
----
-
 ## Tech Used
 
 | Part | Technology |
@@ -113,7 +93,6 @@ LLM_PROVIDER=groq
 | Website | React, Tailwind CSS |
 | Server | Python, FastAPI |
 | AI Search | Sentence Transformers, FAISS |
-| AI Answers | OpenAI / Groq |
 | PDF Reading | PyPDF |
 | Database | SQLite |
 
@@ -123,6 +102,6 @@ LLM_PROVIDER=groq
 
 1. Admin uploads a PDF → app reads all the text → splits into small chunks → converts to numbers (embeddings) → saves in FAISS
 2. Student asks a question → question is also converted to numbers → FAISS finds the most similar chunks
-3. Those chunks are sent to the AI (LLM) → AI writes a clear answer → shows the source document and page number
+3. The most relevant chunks are shown to the student as the answer with the source document and page number
 
 This technique is called **RAG (Retrieval-Augmented Generation)**.
